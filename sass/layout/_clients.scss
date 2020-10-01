@@ -1,0 +1,45 @@
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients__primary {
+    @extend %primary;
+}
+
+.clients__list {
+    padding-left: 0;
+}
+
+.clients__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients__link {
+    color: #afb1b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    transition: border $transition-argument;
+
+    &:hover,
+    &:focus {
+    border: 1px solid $accent-color;
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+
+    transition: fill $transition-argument;
+
+    .clients__link:hover & {
+        fill: $accent-color;
+    }
+}
+

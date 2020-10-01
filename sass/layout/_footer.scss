@@ -1,0 +1,84 @@
+.footer {
+    background-color: $footer-background-color;
+}
+
+
+.footer-contacts {
+    margin-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-contacts__direction {
+    margin-top: 20px;
+    font-style: normal;
+    letter-spacing: 0.055em;
+    color: $primary-white-color;
+}
+
+
+.footer-contacts__link {
+    margin-top: 9px;
+    display: block;
+    color: $footer-text-color;
+}
+
+.footer-join__title,
+.subscribe__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+}
+
+.footer__social-link {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color $transition-argument;
+}
+
+
+.footer-join {
+    padding-top: 72px;
+    padding-bottom: 100px;
+}
+
+.subscribe {
+    padding-top: 72px;
+    padding-bottom: 94px;
+    margin-left: 94px;
+}
+
+.subscribe__input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+        color: $footer-text-color;
+    }
+}
+
+.subscribe__button {
+    margin-left: 10px;
+    padding-left: 29px;
+    padding-right: 28px;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+        vertical-align: middle;
+        background-image: url('../images/icon-subscribe.svg');
+        background-size: contain;
+    }
+}
