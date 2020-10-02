@@ -1,12 +1,38 @@
 .footer {
-    background-color: $footer-background-color;
-}
-
-
-.footer-contacts {
-    margin-right: 70px;
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: $footer-background-color;
+    
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+       
+    }
+}
+
+.footer-conteiner {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.footer-contacts {
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 60px;
+    
+
+    @media screen and (min-width: 1200px){
+        margin-right: 70px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.footer__logo {
+    
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
 }
 
 .footer-contacts__direction {
@@ -42,18 +68,24 @@
 
 
 .footer-join {
-    padding-top: 72px;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 72px;
+        padding-bottom: 100px;
+    }
 }
 
 .subscribe {
-    padding-top: 72px;
-    padding-bottom: 94px;
-    margin-left: 94px;
+    @media screen and (min-width: 1200px) {
+        margin-left: 94px;
+        padding-top: 72px;
+        padding-bottom: 94px;
+    }
 }
 
 .subscribe__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     padding: 15px 16px;
     background-color: transparent;
@@ -64,10 +96,17 @@
     &::placeholder {
         color: $footer-text-color;
     }
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
 }
 
 .subscribe__button {
-    margin-left: 10px;
     padding-left: 29px;
     padding-right: 28px;
 
@@ -80,5 +119,9 @@
         vertical-align: middle;
         background-image: url('../images/icon-subscribe.svg');
         background-size: contain;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 10px;
     }
 }
