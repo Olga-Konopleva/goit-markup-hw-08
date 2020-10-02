@@ -319,6 +319,21 @@ a {
   display: flex;
 }
 
+@media screen and (min-width: 768px) {
+  .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+  }
+}
+
 .logo {
   display: inline-block;
   padding-top: 16px;
@@ -367,11 +382,14 @@ a {
   margin-left: 50px;
 }
 
-.navigation__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0;
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin-right: 84px;
+  }
 }
 
 .navigation__link {
@@ -407,10 +425,15 @@ a {
 }
 
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-left: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .contacts__link + .contacts__link {
@@ -418,8 +441,8 @@ a {
 }
 
 .contacts__link {
+  font-size: 18px;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-style: normal;
@@ -430,6 +453,21 @@ a {
 
 .contacts__link:hover, .contacts__link:focus {
   color: #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+  }
 }
 
 .contacts__icon-mail,

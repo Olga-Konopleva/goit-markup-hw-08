@@ -22,17 +22,30 @@
 }
 
 .advantages__list {
-    @media screen and (min-width: 768) {
+    @media screen and (min-width: 768px) {
         display: flex;
         padding-left: 0;
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-wrap: wrap;
     }
 }
 
 .advantages__item {
     &:not(:last-child) {
         margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 30px) / 2);
+
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+        
     }
 
     @media screen and (min-width: 1200px) {

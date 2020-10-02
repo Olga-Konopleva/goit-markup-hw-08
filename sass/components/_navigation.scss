@@ -15,8 +15,12 @@
 }
 
 .navigation__list {
+
+    @media screen and (min-width: 768px) {
     display: flex;
     padding-left: 0;
+    margin-right: 84px;
+    }
 }
 
 .navigation__link {
