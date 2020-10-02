@@ -1,10 +1,20 @@
 .services {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .services__primary {
     @extend %primary;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
 }
 
 .services__list {

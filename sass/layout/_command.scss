@@ -1,11 +1,21 @@
 .command {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: $secondary-background-color;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .command__primary {
     @extend %primary;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
 }
 
 .command__title {
@@ -19,11 +29,14 @@
 }
 
 .command__list {
-    display: flex;
     padding-left: 0;
     margin-top: 0;
     margin-bottom: 0;
-}
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+ }
 
 .command__item {
     text-align: center;
@@ -34,8 +47,12 @@
     border-radius: 0px 0px 4px 4px;
 
     &:not(:last-child) {
-        margin-right: 30px;
-    }
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 1200px) {
+            margin-right: 30px;
+        }
+    }    
 }
 
 .command__picture {

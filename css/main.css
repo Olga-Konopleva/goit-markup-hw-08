@@ -11,7 +11,6 @@ Use a better box model (opinionated).
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 2px solid red;
 }
 
 /**
@@ -253,9 +252,9 @@ summary {
 
 .services__primary, .command__primary, .clients__primary {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
@@ -616,8 +615,22 @@ a {
 }
 
 .services {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    display: block;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services__primary {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .services__list {
@@ -662,9 +675,23 @@ a {
 }
 
 .command {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #F5F4FA;
+}
+
+@media screen and (min-width: 1200px) {
+  .command {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .command__primary {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .command__title {
@@ -678,12 +705,17 @@ a {
 }
 
 .command__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .command__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .command__item {
@@ -696,7 +728,13 @@ a {
 }
 
 .command__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .command__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .command__picture {
