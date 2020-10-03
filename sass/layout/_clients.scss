@@ -29,7 +29,11 @@
 
 .clients__item {
     margin: 15px;
-    width: calc((100% - 2 * 30px) / 2);
+    flex-basis: calc((100% - 2 * 30px) / 2);
+
+    @media screen and (min-width: 768px) {
+        flex-basis: calc((100% - 3 * 30px) / 3);
+    }
 }
 
 .clients__item:not(:last-child) {
@@ -53,6 +57,10 @@
     &:hover,
     &:focus {
     border: 1px solid $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 226px;
     }
 
     @media screen and (min-width: 1200px) {

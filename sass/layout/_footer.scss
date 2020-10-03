@@ -13,13 +13,19 @@
     @media screen and (min-width: 768px) {
         display: flex;
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        justify-content: space-around;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
 }
 
 .footer-contacts {
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 60px;
     
+    margin-bottom: 60px;
+    
+
 
     @media screen and (min-width: 1200px){
         margin-right: 70px;
@@ -68,7 +74,7 @@
 
 
 .footer-join {
-    padding-bottom: 60px;
+    margin-bottom: 60px;
 
     @media screen and (min-width: 1200px) {
         padding-top: 72px;

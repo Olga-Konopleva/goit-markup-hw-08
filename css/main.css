@@ -791,6 +791,13 @@ a {
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .command__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .command__list {
     display: -webkit-box;
@@ -808,13 +815,22 @@ a {
   border-radius: 0px 0px 4px 4px;
 }
 
-.command__item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .command__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-@media screen and (min-width: 1200px) {
-  .command__item:not(:last-child) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .command__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+  .command__item:nth-child(2n+1) {
     margin-right: 30px;
+  }
+  .command__item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
   }
 }
 
@@ -916,7 +932,15 @@ a {
 
 .clients__item {
   margin: 15px;
-  width: calc((100% - 2 * 30px) / 2);
+  -ms-flex-preferred-size: calc((100% - 2 * 30px) / 2);
+      flex-basis: calc((100% - 2 * 30px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .clients__item {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
+        flex-basis: calc((100% - 3 * 30px) / 3);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -946,6 +970,12 @@ a {
 
 .clients__link:hover, .clients__link:focus {
   border: 1px solid #2196F3;
+}
+
+@media screen and (min-width: 768px) {
+  .clients__link {
+    max-width: 226px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -984,10 +1014,20 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-conteiner {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .footer-contacts {
-  margin-right: auto;
-  margin-left: auto;
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1035,7 +1075,7 @@ a {
 }
 
 .footer-join {
-  padding-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
