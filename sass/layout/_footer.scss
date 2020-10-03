@@ -12,25 +12,24 @@
 .footer-conteiner {
     @media screen and (min-width: 768px) {
         display: flex;
+        align-items: baseline;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        justify-content: space-around;
-        align-items: baseline;
+        justify-content: space-around;       
         flex-wrap: wrap;
     }
 }
 
 .footer-contacts {
-    
-    margin-bottom: 60px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+    }
     
 
 
     @media screen and (min-width: 1200px){
         margin-right: 70px;
-        padding-top: 60px;
-        padding-bottom: 60px;
     }
 }
 
@@ -74,19 +73,14 @@
 
 
 .footer-join {
-    margin-bottom: 60px;
-
-    @media screen and (min-width: 1200px) {
-        padding-top: 72px;
-        padding-bottom: 100px;
+    @media screen and (max-width: 1199px){
+        margin-bottom: 60px;
     }
 }
 
 .subscribe {
     @media screen and (min-width: 1200px) {
         margin-left: 94px;
-        padding-top: 72px;
-        padding-bottom: 94px;
     }
 }
 

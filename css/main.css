@@ -11,7 +11,6 @@ Use a better box model (opinionated).
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 2px solid red;
 }
 
 /**
@@ -403,6 +402,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    margin-right: 305px;
+  }
+}
+
 .navigation__link {
   position: relative;
   font-weight: 500;
@@ -444,6 +449,12 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item + .contacts__item {
+    margin-left: 30px;
   }
 }
 
@@ -594,7 +605,7 @@ a {
 
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.37;
   }
@@ -607,10 +618,12 @@ a {
 
 .advantages {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .advantages {
+    padding-top: 94px;
     padding-top: 94px;
   }
 }
@@ -650,10 +663,6 @@ a {
   }
 }
 
-.advantages__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
 @media screen and (min-width: 768px) {
   .advantages__item {
     -ms-flex-preferred-size: calc((100% - 30px) / 2);
@@ -661,6 +670,12 @@ a {
   }
   .advantages__item:nth-child(2n+1) {
     margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .advantages__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -702,7 +717,6 @@ a {
 @media screen and (min-width: 1200px) {
   .services {
     display: block;
-    padding-top: 94px;
     padding-bottom: 94px;
   }
 }
@@ -834,6 +848,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .command__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 .command__picture {
   margin-bottom: 30px;
 }
@@ -919,12 +939,12 @@ a {
 }
 
 .clients__list {
+  margin: -15px;
   padding-left: 0;
 }
 
 @media screen and (max-width: 1199px) {
   .clients__list {
-    margin: -15px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -940,12 +960,6 @@ a {
   .clients__item {
     -ms-flex-preferred-size: calc((100% - 3 * 30px) / 3);
         flex-basis: calc((100% - 3 * 30px) / 3);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .clients__item:not(:last-child) {
-    margin-right: 30px;
   }
 }
 
@@ -1011,6 +1025,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1018,23 +1035,20 @@ a {
   .footer-conteiner {
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 
-.footer-contacts {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer-contacts {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .footer-contacts {
     margin-right: 70px;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
 
@@ -1074,22 +1088,15 @@ a {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-join {
-  margin-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .footer-join {
-    padding-top: 72px;
-    padding-bottom: 100px;
+    margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .subscribe {
     margin-left: 94px;
-    padding-top: 72px;
-    padding-bottom: 94px;
   }
 }
 
