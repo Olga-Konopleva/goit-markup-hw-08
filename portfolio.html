@@ -12,7 +12,13 @@
     <header>
         <div class="container header-container">
             <a href="./index.html" class="logo"><span class="logo__text">Web</span>Studio</a>
-            <nav class="navigation">
+            <button type="button" class="menu-button" aria-expanded="false" aria-controls="navigation" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu" href="./images/sprite-icon.svg#menu-burger"></use>
+                    <use class="icon-close" href="./images/sprite-icon.svg#menu-close"></use>
+                </svg>
+            </button>
+            <nav class="navigation" id="navigation" data-menu>
     
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="./index.html" class="navigation__link">Студия</a></li>
@@ -410,5 +416,6 @@
             </form>   
         </div>
     </footer>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
