@@ -329,17 +329,24 @@ a {
   display: flex;
 }
 
+header {
+  border-bottom: 1px solid #ECECEC;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @media screen and (min-width: 768px) {
   .header-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     height: 80px;
   }
 }
@@ -438,6 +445,16 @@ a {
   display: block;
   border-radius: 2px;
   background-color: #2196F3;
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0px;
+  background-color: transparent;
 }
 
 .contacts {
@@ -1178,8 +1195,8 @@ a {
   top: 50%;
   left: 50%;
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   background-color: #ffffff;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
@@ -1187,6 +1204,13 @@ a {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1319,11 +1343,16 @@ a {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 1199px) {
+  .form__checkbox {
+    font-size: 12px;
+  }
+}
+
 .form__checkbox-icon {
   content: '';
   display: inline-block;
-  margin-left: 12px;
-  margin-right: 5px;
+  margin-right: 3px;
   vertical-align: middle;
   width: 16px;
   height: 15px;
@@ -1339,6 +1368,12 @@ a {
   background-image: url("../images/check-modal.svg");
   background-size: contain;
   background-origin: border-box;
+}
+
+@media screen and (min-width: 1200px) {
+  .form__checkbox-icon {
+    margin-left: 12px;
+  }
 }
 
 .form__checkbox-link {
