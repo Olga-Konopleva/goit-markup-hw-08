@@ -33,6 +33,12 @@ html {
   /* 2 */
 }
 
+@media screen and (max-width: 1600px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 /*
 Sections
 ========
@@ -42,6 +48,12 @@ Remove the margin in all browsers.
 */
 body {
   margin: 0;
+}
+
+@media screen and (max-width: 1600px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 /**
@@ -713,6 +725,9 @@ header {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: -15px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -933,9 +948,9 @@ header {
 }
 
 .subscribe__input {
-  width: 100%;
   height: 50px;
   padding: 15px 16px;
+  color: #ffffff;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -959,8 +974,21 @@ header {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 479px) {
+  .subscribe__input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .subscribe__input {
+    width: 450px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .subscribe__input {
+    display: block;
     margin-bottom: 20px;
   }
 }
